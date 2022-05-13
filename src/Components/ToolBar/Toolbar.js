@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SimoleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
-const Toolar = () => {
+const Toolbar = () => {
     return (
         <View style={styles.mainContainer} >
             <View style={styles.firstContainer} >
@@ -41,7 +41,7 @@ const Toolar = () => {
         </View>
     )
 }
-export default Toolar;
+export default Toolbar;
 const styles = StyleSheet.create({
     mainContainer: {
         flexDirection: 'row',
