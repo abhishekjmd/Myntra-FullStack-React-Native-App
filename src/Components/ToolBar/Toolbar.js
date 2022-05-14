@@ -3,7 +3,14 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SimoleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+// import ToggleBar from '../ToggleBar/ToggleBar';
+import { useNavigation } from '@react-navigation/native';
 const Toolbar = () => {
+    const navigation = useNavigation();
+    const menuPressed = ()=>{
+        console.warn('Menu Pressed')
+        navigation.navigate('Toggle')
+    }
     return (
         <View style={styles.mainContainer} >
             <View style={styles.firstContainer} >
@@ -12,6 +19,7 @@ const Toolbar = () => {
                     size = {35}
                     color="black"
                     style={styles.ficon}
+                    onPress={menuPressed}
                 />
                 <Image source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png' }}
                     style={styles.logo}
