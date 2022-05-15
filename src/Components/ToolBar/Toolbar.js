@@ -1,28 +1,21 @@
 /* eslint-disable prettier/prettier */
-import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SimoleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
-// import ToggleBar from '../ToggleBar/ToggleBar';
-import { useNavigation } from '@react-navigation/native';
-const Toolbar = () => {
-    const navigation = useNavigation();
-    const menuPressed = ()=>{
-        console.warn('Menu Pressed')
-        navigation.navigate('Toggle')
-    }
+const Toolbar = ({ pressed }) => {
     return (
         <View style={styles.mainContainer} >
             <View style={styles.firstContainer} >
                 <Ionicons
-                    name = 'menu'
-                    size = {35}
+                    name='menu'
+                    size={35}
                     color="black"
                     style={styles.ficon}
-                    onPress={menuPressed}
+                    onPress={pressed}
                 />
                 <Image source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png' }}
-                    style={styles.logo}
+                 style={styles.logo}
                 />
                 <View style={styles.textContainer} >
                     <Text style={styles.text}>Become</Text>
