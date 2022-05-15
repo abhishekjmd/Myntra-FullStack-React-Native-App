@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   mainContainer: {
     width: '90%',
     height: 70,
-    top: 606,
+    top: 500,
     justifyContent: 'center',
   },
   subContainer: {
