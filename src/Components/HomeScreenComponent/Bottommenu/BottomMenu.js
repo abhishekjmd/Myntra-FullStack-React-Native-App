@@ -5,13 +5,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
 import SimoleLineIcons from
   'react-native-vector-icons/SimpleLineIcons';
-const BottomMenu = () => {
-  const Homepreesed = () => {
-    console.warn("Home pressed")
-  }
-  const UserPressed = () => {
-    console.warn('profile pressed')
-  }
+const BottomMenu = ({userPressed}) => {
   const CategoriesPressed = () => {
     console.warn('Categories pressed')
   }
@@ -21,12 +15,15 @@ const BottomMenu = () => {
   const ExplorePressed = () => {
     console.warn('Explore pressed')
   }
+  const LogoPressed = () => {
+    console.warn('Logo pressed')
+  }
 
   return (
     <View style={styles.mainContainer} >
       <View style={styles.subContainer} >
         <Pressable
-          onPress={Homepreesed}>
+          onPress={LogoPressed}>
           <Image source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png' }}
           style={styles.logo} />
           <Text style={styles.icontext}>Home</Text>
@@ -64,7 +61,7 @@ const BottomMenu = () => {
         </Pressable>
         <Pressable
         style={styles.iconContainer}
-        onPress={UserPressed}
+          onPress={userPressed}
         >
           <SimoleLineIcons size={20} name="user"
             style={styles.icon}

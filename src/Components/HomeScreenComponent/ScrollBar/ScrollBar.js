@@ -3,15 +3,15 @@ import { StyleSheet, View, Image, ScrollView, TouchableOpacity } from 'react-nat
 import React from 'react'
 import BottomMenu from '../Bottommenu/BottomMenu'
 const images = [
-  require('../../../assets/images/image1.jpeg'),
-  require('../../../assets/images/image2.jpeg'),
-  require('../../../assets/images/image3.jpeg'),
-  require('../../../assets/images/image4.jpeg'),
-  require('../../../assets/images/image5.jpeg'),
-  require('../../../assets/images/image6.jpeg'),
-  require('../../../assets/images/image7.jpeg'),
-  require('../../../assets/images/image8.jpeg'),
-  require('../../../assets/images/image9.jpeg'),
+  require('../../../../assets/images/image1.jpeg'),
+  require('../../../../assets/images/image2.jpeg'),
+  require('../../../../assets/images/image3.jpeg'),
+  require('../../../../assets/images/image4.jpeg'),
+  require('../../../../assets/images/image5.jpeg'),
+  require('../../../../assets/images/image6.jpeg'),
+  require('../../../../assets/images/image7.jpeg'),
+  require('../../../../assets/images/image8.jpeg'),
+  require('../../../../assets/images/image9.jpeg'),
 
 ]
 

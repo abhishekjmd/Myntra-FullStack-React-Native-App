@@ -1,20 +1,25 @@
 /* eslint-disable semi */
 /* eslint-disable prettier/prettier */
-import { View, Text } from 'react-native'
+import { View, StyleSheet,StatusBar } from 'react-native'
 import React from 'react'
-import HomeScreen from './src/Screens/HomeScreen'
-import ScrollBar from './src/Components/ScrollBar/ScrollBar'
-import BottomMenu from './src/Components/Bottommenu/BottomMenu'
-
-ScrollBar
+import Navigation from './src/Navigation/index'
+import ProfileScreen from './src/Screens/ProfileScreen'
 const App = () => {
   return (
-    <View>
-      <HomeScreen />
-      {/* <BottomMenu /> */}
-      {/* <ScrollBar /> */}
+    <View style={styles.root}>
+      <StatusBar 
+      // translucent={true}
+      backgroundColor={'gray'}
+      barStyle='dark-content'
+      />
+      <ProfileScreen />
     </View>
   )
 }
 
-export default App
+export default App;
+const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+  },
+})
