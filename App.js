@@ -1,4 +1,3 @@
-/* eslint-disable semi */
 /* eslint-disable prettier/prettier */
 import { View, StyleSheet,StatusBar } from 'react-native'
 import React from 'react'
@@ -12,7 +11,7 @@ const App = () => {
       backgroundColor={'gray'}
       barStyle='dark-content'
       />
-      <ProfileScreen />
+      <Navigation />
     </View>
   )
 }

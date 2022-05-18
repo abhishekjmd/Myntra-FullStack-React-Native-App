@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
-const Upperscreen = () => {
+const UpperPortion = () => {
     return (
         <View style={styles.mainContainer} >
             <View style={styles.colorContainer} />
@@ -20,7 +20,7 @@ const Upperscreen = () => {
     )
 }
 
-export default Upperscreen
+export default UpperPortion
 
 const styles = StyleSheet.create({
     mainContainer: {

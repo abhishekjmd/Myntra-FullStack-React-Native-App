@@ -10,7 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 const HomeScreen = () => {
   const navigation = useNavigation();
   const Homepreesed = () => {
-    console.warn("Home pressed")
+    // console.warn("Home pressed")
     navigation.navigate('profile')
   }
   return (
