@@ -13,12 +13,17 @@ const HomeScreen = () => {
     // console.warn("Home pressed")
     navigation.navigate('profile')
   }
+   const ExplorePress = () => {
+  //  console.warn('Explore pressed')
+     navigation.navigate('Explore on Myntra')
+ }
   return (
     <View>
       <ToggleBar />
       <ScrollBar />
       <BottomMenu
         userPressed={Homepreesed}
+        ExplorePressed={ExplorePress}
       />
     </View>
   )

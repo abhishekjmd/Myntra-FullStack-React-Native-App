@@ -4,16 +4,15 @@ import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
 import SimoleLineIcons from
-  'react-native-vector-icons/SimpleLineIcons';
-const BottomMenu = ({userPressed}) => {
+  'react-native-vector-icons/SimpleLineIcons'
+import MaterialCommunityIcons from
+  'react-native-vector-icons/MaterialCommunityIcons';
+const BottomMenu = ({userPressed,ExplorePressed}) => {
   const CategoriesPressed = () => {
     console.warn('Categories pressed')
   }
   const StudioPressed = () => {
     console.warn('Studio pressed')
-  }
-  const ExplorePressed = () => {
-    console.warn('Explore pressed')
   }
   const LogoPressed = () => {
     console.warn('Logo pressed')
@@ -52,9 +51,9 @@ const BottomMenu = ({userPressed}) => {
         style={styles.iconContainer}
         onPress={ExplorePressed}
         >
-          <AntDesign 
-          size={20} 
-          name="find"
+          <MaterialCommunityIcons
+          size={25} 
+            name="atom"
           style={styles.icon}
           />
           <Text style={styles.icontext}> Explore </Text>

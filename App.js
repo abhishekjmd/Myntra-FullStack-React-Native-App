@@ -1,8 +1,9 @@
 /* eslint-disable prettier/prettier */
 import { View, StyleSheet,StatusBar } from 'react-native'
 import React from 'react'
-import Navigation from './src/Navigation/index'
+import NavigationHomeScreen from './src/NavigationHomeScreen/NavigationHomeScreen'
 import ProfileScreen from './src/Screens/ProfileScreen'
+import ExploreScreen from './src/Screens/ExploreScreen'
 const App = () => {
   return (
     <View style={styles.root}>
@@ -11,7 +12,10 @@ const App = () => {
       backgroundColor={'gray'}
       barStyle='dark-content'
       />
-      <Navigation />
+      {/*
+      // <ExploreScreen />
+  */}
+      <NavigationHomeScreen />
     </View>
   )
 }
@@ -20,5 +24,6 @@ export default App;
 const styles = StyleSheet.create({
   root: {
     flex: 1,
+    // backgroundColor:'white',
   },
 })
