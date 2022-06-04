@@ -5,7 +5,7 @@ import NavigationHomeScreen from './src/NavigationHomeScreen/NavigationHomeScree
 import ProfileScreen from './src/Screens/ProfileScreen'
 import ExploreScreen from './src/Screens/ExploreScreen'
 import CategoriesScreen from './src/Screens/CategoriesScreen'
-
+import ModalComponent from './src/Components/CategoriesScreen Compoents/ModalComponent'
 const App = () => {
   return (
     <View style={styles.root}>
@@ -14,7 +14,8 @@ const App = () => {
         backgroundColor={'gray'}
         barStyle='dark-content'
       />
-      <NavigationHomeScreen />
+      {/*<NavigationHomeScreen />*/}
+      <ModalComponent />
     </View>
   )
 }

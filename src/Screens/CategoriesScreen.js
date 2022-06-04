@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import React from 'react'
 import TopCategories from '../Components/CategoriesScreen Compoents/TopCategories'
+import ModalRenderComponent from '../Components/CategoriesScreen Compoents/ModalRenderComponent'
+
 const CategoriesScreen = () => {
   const summerShopPressed = () => {
     console.warn('summer shop Pressed')
@@ -46,12 +48,14 @@ const CategoriesScreen = () => {
   }
   return (
     <ScrollView>
+      <ModalRenderComponent />
       <TopCategories
         text='summer shop'
         subtext='turn up the heat in style'
         image={require('../../assets/images/Categories1.png')}
         Press={summerShopPressed}
         iconRequire='chevron-small-down'
+
       />
       <TopCategories
         text='women'

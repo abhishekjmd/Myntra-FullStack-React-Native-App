@@ -1,12 +1,12 @@
-import { StyleSheet, Text, View,Pressable } from 'react-native'
 import React from 'react'
+import { StyleSheet, Text, View, Pressable } from 'react-native'
 import MaterialCommunityIcons from
   'react-native-vector-icons/MaterialCommunityIcons'
 import EvilIcons from
   'react-native-vector-icons/EvilIcons'
 import FontAwesome5 from
   'react-native-vector-icons/FontAwesome5'
-const UpperExplorePortion = ({ text, Icon, container, type,extText }) => {
+const UpperExplorePortion = ({ text, Icon, container, type, extText }) => {
   return (
     <View>
       <View style={[styles.rootContainer,
@@ -22,8 +22,8 @@ const UpperExplorePortion = ({ text, Icon, container, type,extText }) => {
           [`txt1_${type}`]]} > {text} </
           Text>
         </View>
-        <View style={[styles.extContainer,styles[`extContainer_${type}`]]} > 
-          <Text style={[styles.extText,styles[`extText_${type}`]]} > {extText} </Text>
+        <View style={[styles.extContainer, styles[`extContainer_${type}`]]} >
+          <Text style={[styles.extText, styles[`extText_${type}`]]} > {extText} </Text>
         </View>
       </View>
     </View>
@@ -40,14 +40,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderBottomWidth: 1,
     borderBottomColor: '#ededef',
-    backgroundColor:'white,'
+    backgroundColor: 'white,'
   },
   rootContainer_PrimaryQ: {
     width: '100%',
     height: 55,
     alignItems: 'center',
     marginLeft: 30,
-    
+
   },
   iconContainer: {
     marginLeft: 15,
@@ -66,15 +66,15 @@ const styles = StyleSheet.create({
     // fontWeight: '500',
     fontFamily: 'Roboto',
   },
-  extContainer:{},
+  extContainer: {},
   extText: {},
-  extContainer_PrimaryJ:{
-    marginLeft:5,
-    backgroundColor:'#d126a9',
-    borderRadius:1,
+  extContainer_PrimaryJ: {
+    marginLeft: 5,
+    backgroundColor: '#d126a9',
+    borderRadius: 1,
   },
-  extText_PrimaryJ:{
-    color:'white',
-    fontWeight:'800'
+  extText_PrimaryJ: {
+    color: 'white',
+    fontWeight: '800'
   },
 })
