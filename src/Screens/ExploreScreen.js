@@ -56,6 +56,10 @@ const ExploreScreen = () => {
         text='Myntra Masterclass'
         Icon='alpha-m-circle-outline'
       />
+      <UpperExplorePortion
+        text='Myntra Masterclass'
+        Icon='alpha-m-circle-outline'
+      />
     </ScrollView>
   )
 }

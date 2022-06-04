@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../Screens/HomeScreen';
 import ProfileScreen from '../Screens/ProfileScreen'
 import ExploreScreen from '../Screens/ExploreScreen'
+import CategoriesScreen from '../Screens/CategoriesScreen';
 const Stack = createNativeStackNavigator();
 const NavigationHomeScreen = () => {
     return (
@@ -15,6 +16,9 @@ const NavigationHomeScreen = () => {
                 <Stack.Screen name='profile' component={ProfileScreen} />
                 <Stack.Screen 
                 name='Explore on Myntra' component={ExploreScreen} />
+                <Stack.Screen
+                    name='Categories' component=
+                    {CategoriesScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     )

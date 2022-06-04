@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
-  const Homepreesed = () => {
+  const Profilepreesed = () => {
     // console.warn("Home pressed")
     navigation.navigate('profile')
   }
@@ -17,13 +17,18 @@ const HomeScreen = () => {
   //  console.warn('Explore pressed')
      navigation.navigate('Explore on Myntra')
  }
+  const CategoriesPressed = () => {
+    // console.warn('Categories pressed')
+    navigation.navigate('Categories')
+  }
   return (
     <View>
       <ToggleBar />
       <ScrollBar />
       <BottomMenu
-        userPressed={Homepreesed}
+        userPressed={Profilepreesed}
         ExplorePressed={ExplorePress}
+        CategoriesPressed={CategoriesPressed}
       />
     </View>
   )

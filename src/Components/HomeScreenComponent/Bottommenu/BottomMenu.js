@@ -7,10 +7,10 @@ import SimoleLineIcons from
   'react-native-vector-icons/SimpleLineIcons'
 import MaterialCommunityIcons from
   'react-native-vector-icons/MaterialCommunityIcons';
-const BottomMenu = ({userPressed,ExplorePressed}) => {
-  const CategoriesPressed = () => {
-    console.warn('Categories pressed')
-  }
+const BottomMenu = ({userPressed,ExplorePressed,CategoriesPressed}) => {
+ 
+ 
+ 
   const StudioPressed = () => {
     console.warn('Studio pressed')
   }
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   mainContainer: {
     width: '90%',
     height: 70,
-    top: 500,
+    top: 540,
     justifyContent: 'center',
   },
   subContainer: {
