@@ -1,11 +1,14 @@
-import { StyleSheet, Text, View, Image,Pressable } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
+import React, { useState } from 'react'
 import Entypo from 'react-native-vector-icons/Entypo'
-const TopCategories = ({ text, subtext, type,image,Press,iconRequire }) => {
+const TopCategories = ({ text, subtext, type, image, Press, iconRequire, subPress }) => {
     return (
-        <Pressable onPress={Press} >
+        <View>
             <View style={[styles.mainContainer, styles[`mainContainer_${type}`]]} >
-                <View style={styles.colltext} >
+                <Pressable style={styles.colltext}
+                    onPress={Press}
+
+                >
                     <View
                         style={styles.uptxtContainer} >
                         <Text
@@ -18,20 +21,22 @@ const TopCategories = ({ text, subtext, type,image,Press,iconRequire }) => {
                             {subtext}
                         </Text>
                     </View>
-                </View>
+                </Pressable>
                 <Entypo
                     name={iconRequire}
-                    style={[styles.icon,styles[`icon_${type}`]]}
+                    style={[styles.icon, styles[`icon_${type}`]]}
                     size={20}
+                    onPress={subPress}
+
                 />
-                
-                    <Image
-                        source={image}
+
+                <Image
+                    source={image}
                     style={[styles.image, styles[`image_${type}`]]}
-                    />
-                
+                />
+
             </View>
-        </Pressable>
+        </View>
     )
 }
 
@@ -48,7 +53,7 @@ const styles = StyleSheet.create({
     },
     icon: {
         bottom: 10,
-        left:10,
+        left: 10,
     },
     mainContainer_Primary1: {
         // flexDirection: 'row',
@@ -264,9 +269,9 @@ const styles = StyleSheet.create({
         width: 140,
         height: 140,
     },
-    
-    
-    
-    
-    
+
+
+
+
+
 })
