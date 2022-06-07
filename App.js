@@ -14,7 +14,7 @@ const App = () => {
         backgroundColor={'gray'}
         barStyle='dark-content'
       />
-      <CategoriesScreen />
+      <NavigationHomeScreen />
       {/* <ModalComponent /> */}
     </View>
   )
