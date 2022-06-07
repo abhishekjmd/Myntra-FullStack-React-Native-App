@@ -1,18 +1,21 @@
 import { StyleSheet, Text, View, Modal } from 'react-native'
 import React from 'react'
 import ModalComponent from '../ModalComponent'
-const FirstModal = ({ condition }) => {
+const FirstModal = ({ condition, closeCondition }) => {
     return (
         <View>
             <Modal
                 visible={condition}
+                // onRequestClose={closeCondition}
                 transparent={true}
                 animationType={'fade'}
             >
                 <View style={styles.modalstl} >
                     <ModalComponent
                         text='explore screen'
-                    // type='Primary1'
+                        iconRequire='cross'
+                        iconPressed={closeCondition}
+
                     />
                     <ModalComponent
                         text='top brands'
@@ -54,6 +57,6 @@ const styles = StyleSheet.create({
     modalstl: {
         width: '100%',
         height: 600,
-        marginTop: 130,
+        top: 150,
     },
 })

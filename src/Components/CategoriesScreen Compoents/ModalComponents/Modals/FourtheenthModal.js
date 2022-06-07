@@ -11,55 +11,55 @@ const SecondModal = ({ condition, closeCondition }) => {
             >
                 <ScrollView style={styles.modalstl} >
                     <ModalComponent
-                        text='westernwear'
+                        text='explore kids store'
                         iconRequire='cross'
                         iconPressed={closeCondition}
 
                     />
                     <ModalComponent
-                        text='ethnic & Fusionwear'
+                        text='footwear'
                         iconRequire='chevron-small-down'
                     />
                     <ModalComponent
-                        text='Footwear'
+                        text='bottomwear'
                         iconRequire='chevron-small-down'
                     />
                     <ModalComponent
-                        text='lingerie'
-                        iconRequire='chevron-small-down'
-                    />
-                    <ModalComponent
-                        text='bags,wallets & clutches'
-                        iconRequire='chevron-small-down'
-                    />
-                    <ModalComponent
-                        text='jewellery & hair accessories'
+                        text='watches'
                         iconRequire='chevron-small-down'
                     />
                     <ModalComponent
                         text='other accessories'
                         iconRequire='chevron-small-down'
-
-                    />
-                    <ModalComponent
-                        text='beauty & personal care'
-                        iconRequire='chevron-small-down'
-
                     />
                     <ModalComponent
                         text='sports & activewear'
                         iconRequire='chevron-small-down'
                     />
                     <ModalComponent
+                        text='innerwear'
+                        iconRequire='chevron-small-down'
+
+                    />
+                    <ModalComponent
+                        text='ethnicwear'
+                        iconRequire='chevron-small-down'
+
+                    />
+                    <ModalComponent
+                        text='loungewear & sleepwear'
+                        iconRequire='chevron-small-down'
+                    />
+                    <ModalComponent
+                        text='personal care'
+                        iconRequire='chevron-small-down'
+                    />
+                    <ModalComponent
+                        text='bags, backpacks & wallets'
+                        iconRequire='chevron-small-down'
+                    />
+                    <ModalComponent
                         text='luggage & trolleys'
-                        iconRequire='chevron-small-down'
-                    />
-                    <ModalComponent
-                        text='sleepwear & loungewear'
-                        iconRequire='chevron-small-down'
-                    />
-                    <ModalComponent
-                        text='watches'
                         iconRequire='chevron-small-down'
                     />
                     <ModalComponent
@@ -69,13 +69,7 @@ const SecondModal = ({ condition, closeCondition }) => {
                         text='teens'
                     />
                     <ModalComponent
-                        text='maternity'
-                    />
-                    <ModalComponent
-                        text='myntra stylecast'
-                    />
-                    <ModalComponent
-                        text='winterwear store'
+                        text='winter store'
                     />
                     <ModalComponent
                         text='gift card'

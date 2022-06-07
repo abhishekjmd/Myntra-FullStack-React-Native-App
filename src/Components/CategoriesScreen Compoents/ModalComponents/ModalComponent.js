@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Entypo from 'react-native-vector-icons/Entypo';
 import TopCategories from '../TopCategoriesComponents/TopCategories';
 
-const ModalComponent = ({ text, iconRequire, type, }) => {
+const ModalComponent = ({ text, iconRequire, type,iconPressed }) => {
     return (
         <View
             style={[styles.mainContainer,
@@ -24,6 +24,7 @@ const ModalComponent = ({ text, iconRequire, type, }) => {
                         style={[styles.icon, styles
                         [`icon_${type}`]]}
                         size={25}
+                        onPress={iconPressed}
                     />
                 </View>
             </View>
@@ -31,58 +32,6 @@ const ModalComponent = ({ text, iconRequire, type, }) => {
     )
 }
 export default ModalComponent
-
-{/* const ModalComponent = () => {
-    // return (
-        // <View>
-            {/*    <Modal
-                visible={condition}
-                transparent={true}
-                animationType={'fade'}
-            >
-                <View style={styles.modalstl} >
-                    <ModalView
-                        text='explore screen'
-                    // type='Primary1'
-                    />
-                    <ModalView
-                        text='top brands'
-                        iconRequire='chevron-small-down'
-                    />
-                    <ModalView
-                        text='men'
-                        iconRequire='chevron-small-down'
-                    />
-                    <ModalView
-                        text='women'
-                        iconRequire='chevron-small-down'
-                    />
-                    <ModalView
-                        text='kids'
-                        iconRequire='chevron-small-down'
-                    />
-                    <ModalView
-                        text='footwear'
-                    />
-                    <ModalView
-                        text='accessories'
-                    />
-                    <ModalView
-                        text='jewellery'
-                    />
-                    <ModalView
-                        text='beauty'
-                    />
-    
-                </View >
-            </Modal >
-            
-        </View >
-    )
-}
-
-export default ModalComponent */} 
-
 const styles = StyleSheet.create({
     mainContainer: {
         width: '100%',

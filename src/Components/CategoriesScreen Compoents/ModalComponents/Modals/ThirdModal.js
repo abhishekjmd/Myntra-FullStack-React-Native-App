@@ -1,7 +1,7 @@
 import { StyleSheet, View, Modal, ScrollView } from 'react-native'
 import React from 'react'
 import ModalComponent from '../ModalComponent'
-const SecondModal = ({ condition }) => {
+const SecondModal = ({ condition, closeCondition}) => {
     return (
         <View>
             <Modal
@@ -12,7 +12,8 @@ const SecondModal = ({ condition }) => {
                 <ScrollView style={styles.modalstl} >
                     <ModalComponent
                         text='topwear'
-                        iconRequire='chevron-small-down'
+                        iconRequire='cross'
+                        iconPressed={closeCondition}
 
                     />
                     <ModalComponent

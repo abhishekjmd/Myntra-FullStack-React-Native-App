@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import TopCategories from './TopCategories'
 
-const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPressed, homePressed, accessoriesPressed, teensPressed, plusSizePressed, themeStorePressed, stylecastPressed, mallPressed, luxePressed, petPressed, summerShopPressed}) => {
+const TopRenderComponents = ({ womenPressed, subWomenPressed, menPressed, subMenPressed, kidPressed, subKidPressed, beautyPressed, subBeautyPressed, homePressed, subHomePressed, accessoriesPressed, subAccessoriesPressed, teensPressed, subTeensPressed, plusSizePressed, subPlusSizePressed, themeStorePressed, subThemeStorePressed, stylecastPressed, subStylecastPressed, mallPressed, subMallPressed, luxePressed, subLuxePressed, petPressed, subPetPressed, summerShopPressed, subSummerShopPressed }) => {
     {/* const womenPressed = () => {
         console.warn('women Pressed')
         //  setModalOpen(true)
@@ -54,8 +54,8 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 subtext='turn up the heat in style'
                 image={require('../../../../assets/images/Categories1.png')}
                 Press={summerShopPressed}
+                 subPress={subSummerShopPressed}
                 iconRequire='chevron-small-down'
-            //  subPress={() => setModalOpen(false)}
             />
             <TopCategories
                 text='women'
@@ -63,6 +63,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories2.png')}
                 type='Primary1'
                 Press={womenPressed}
+                subPress={subWomenPressed}
                 iconRequire='chevron-small-down'
             />
             <TopCategories
@@ -71,6 +72,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories3.png')}
                 type='Primary2'
                 Press={menPressed}
+                subPress={subMenPressed}
                 iconRequire='chevron-small-down'
             />
             <TopCategories
@@ -79,6 +81,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories4.png')}
                 type='Primary3'
                 Press={kidPressed}
+                subPress={subKidPressed}
                 iconRequire='chevron-small-down'
             />
             <TopCategories
@@ -87,6 +90,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories5.png')}
                 type='Primary4'
                 Press={beautyPressed}
+                subPress={subBeautyPressed}
                 iconRequire='chevron-small-down'
             />
             <TopCategories
@@ -95,6 +99,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories6.png')}
                 type='Primary5'
                 Press={homePressed}
+                subPress={subHomePressed}
                 iconRequire='chevron-small-down'
             />
             <TopCategories
@@ -103,6 +108,8 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories71.png')}
                 type='Primary6'
                 Press={accessoriesPressed}
+                subPress={subAccessoriesPressed}
+
                 iconRequire='chevron-small-down'
             />
             <TopCategories
@@ -111,6 +118,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories7.png')}
                 type='Primary7'
                 Press={teensPressed}
+                subPress={subTeensPressed}
             />
             <TopCategories
                 text='plus size'
@@ -118,6 +126,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories8.png')}
                 type='Primary8'
                 Press={plusSizePressed}
+                subPress={subPlusSizePressed}
                 iconRequire='chevron-small-down'
             />
             <TopCategories
@@ -126,6 +135,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories9.png')}
                 type='Primary9'
                 Press={themeStorePressed}
+                subPress={subThemeStorePressed}
                 iconRequire='chevron-small-down'
             />
             <TopCategories
@@ -134,6 +144,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories10.png')}
                 type='Primary10'
                 Press={stylecastPressed}
+                subPress={subStylecastPressed}
             />
             <TopCategories
                 text='myntra mall'
@@ -141,6 +152,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories10.png')}
                 type='Primary11'
                 Press={mallPressed}
+                subPress={subMallPressed}
                 iconRequire='chevron-small-down'
             />
             <TopCategories
@@ -149,6 +161,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories12.png')}
                 type='Primary12'
                 Press={luxePressed}
+                subPress={subLuxePressed}
                 iconRequire='chevron-small-down'
             />
             <TopCategories
@@ -157,6 +170,7 @@ const TopRenderComponents = ({ womenPressed, menPressed, kidPressed, beautyPress
                 image={require('../../../../assets/images/Categories13.png')}
                 type='Primary13'
                 Press={petPressed}
+                subPress={subPetPressed}
                 iconRequire='chevron-small-down'
             />
         </View>

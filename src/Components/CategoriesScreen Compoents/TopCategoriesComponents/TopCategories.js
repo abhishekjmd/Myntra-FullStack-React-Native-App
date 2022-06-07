@@ -4,7 +4,7 @@ import Entypo from 'react-native-vector-icons/Entypo'
 const TopCategories = ({ text, subtext, type, image, Press, iconRequire, subPress }) => {
     return (
         <View>
-            <View style={[styles.mainContainer, styles[`mainContainer_${type}`]]} >
+            <View style={[styles.mainContainer, styles[`mainContainer_${type}`]]}>
                 <Pressable style={styles.colltext}
                     onPress={Press}
 
@@ -21,20 +21,21 @@ const TopCategories = ({ text, subtext, type, image, Press, iconRequire, subPres
                             {subtext}
                         </Text>
                     </View>
+                </Pressable
+                >
+                <Pressable
+                    onPress={subPress}>
+                    <Entypo
+                        name={iconRequire}
+                        style={[styles.icon, styles[`icon_${type}`]]}
+                        size={20}
+                    />
                 </Pressable>
-                <Entypo
-                    name={iconRequire}
-                    style={[styles.icon, styles[`icon_${type}`]]}
-                    size={20}
-                    onPress={subPress}
-
-                />
-
                 <Image
                     source={image}
                     style={[styles.image, styles[`image_${type}`]]}
                 />
-
+                
             </View>
         </View>
     )
@@ -250,6 +251,7 @@ const styles = StyleSheet.create({
     colltext: {},
     uptxtContainer: {
         marginLeft: 20,
+        // backgroundColor:'#000',
     },
     uptxt: {
         // flexDirection:'row',
