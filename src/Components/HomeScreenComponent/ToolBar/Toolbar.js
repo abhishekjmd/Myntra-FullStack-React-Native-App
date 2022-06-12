@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SimoleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
-const Toolbar = ({ pressed }) => {
+const Toolbar = ({ pressed, NotificationPressed, FavouriteScreenPressed }) => {
     return (
         <View style={styles.mainContainer} >
             <View style={styles.firstContainer} >
@@ -25,14 +25,13 @@ const Toolbar = ({ pressed }) => {
                     <Ionicons name='search-outline'
                         size={25} style={styles.icon}
                     />
-                    <SimoleLineIcons name='microphone'
-                        size={25} style={styles.icon}
-                    />
                     <SimoleLineIcons name='bell'
                         size={25} style={styles.icon}
+                        onPress={NotificationPressed}
                     />
                     <SimoleLineIcons name='heart'
                         size={25} style={styles.icon}
+                        onPress={FavouriteScreenPressed}
                     />
                     <SimoleLineIcons name='bag'
                         size={25} style={styles.icon}

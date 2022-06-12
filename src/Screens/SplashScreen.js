@@ -11,7 +11,7 @@ const openApp = ()=>{
 const SplashScreen = () => {
     const navigation = useNavigation(); 
     setTimeout(() => {
-         navigation.navigate('home')
+         navigation.navigate('Home')
         }, 3000);
     return (
         <View style={styles.mainContainer} >

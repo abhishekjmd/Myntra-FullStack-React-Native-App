@@ -19,9 +19,20 @@ const HomeScreen = () => {
     // console.warn('Categories pressed')
     navigation.navigate('Categories')
   }
+  const FavouriteScreenBtnPressed  = () => {
+    // console.warn('Categories pressed')
+    navigation.navigate('Favourites')
+  }
+  const NotificationbtnPressed = () => {
+  // console.warn('Categories pressed')
+  navigation.navigate('NotificationScreen')
+}
   return (
     <View>
-      <ToggleBar />
+      <ToggleBar 
+      NotificationPressed={NotificationbtnPressed}
+        FavouriteScreenPressed={FavouriteScreenBtnPressed}
+      />
       <ScrollBar />
     </View>
   )

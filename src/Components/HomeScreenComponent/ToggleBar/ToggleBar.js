@@ -4,7 +4,10 @@ import React, { useState, } from 'react'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Toolbar from '../ToolBar/Toolbar';
-const ToggleBar = () => {
+import { useNavigation } from '@react-navigation/native';
+
+const ToggleBar = ({NotificationPressed,FavouriteScreenPressed}) => {
+    const navigation = useNavigation();
     const [modalOpen, setModalOpen] = useState(false);
     const iconPressed = () => {
         setModalOpen(true)
@@ -13,7 +16,8 @@ const ToggleBar = () => {
         <View>
             <Toolbar
                 pressed={iconPressed}
-
+                NotificationPressed={NotificationPressed}
+                FavouriteScreenPressed={FavouriteScreenPressed}
             />
             <Modal
                 visible={modalOpen}
@@ -109,9 +113,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 5,
     },
-    closemodal:{
-        color:'white',
-        bottom:40,
+    closemodal: {
+        color: 'white',
+        bottom: 40,
         left: 210,
     },
     btnContainer: {

@@ -23,7 +23,7 @@ import Feather from 'react-native-vector-icons/Feather';
 
 const NavigationHomeScreen = () => {
     return (
-        <NavigationContainer independent={true} >
+        
             <Tab.Navigator
                 screenOptions={
                     {
@@ -116,7 +116,7 @@ const NavigationHomeScreen = () => {
                     }}
                 />
             </Tab.Navigator>
-        </NavigationContainer>
+        
     )
 }
 export default NavigationHomeScreen;

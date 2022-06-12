@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { View, StyleSheet, StatusBar } from 'react-native'
 import React from 'react'
-import StackNavigation from './src/NavigationHomeScreen/StackNavigation'
+import SplashScreenNavigation from './src/NavigationHomeScreen/SplashScreenNavigation'
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
         backgroundColor={'gray'}
         barStyle='dark-content'
       />
-      <StackNavigation />
+      <SplashScreenNavigation />
     </View>
   )
 }
