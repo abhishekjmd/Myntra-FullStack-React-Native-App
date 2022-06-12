@@ -1,21 +1,17 @@
 /* eslint-disable prettier/prettier */
 import { View, StyleSheet, StatusBar } from 'react-native'
 import React from 'react'
-import NavigationHomeScreen from './src/NavigationHomeScreen/NavigationHomeScreen'
-import ProfileScreen from './src/Screens/ProfileScreen'
-import ExploreScreen from './src/Screens/ExploreScreen'
-import CategoriesScreen from './src/Screens/CategoriesScreen'
-// import ModalComponent from './src/Components/CategoriesScreen Compoents/ModalComponent'
+import StackNavigation from './src/NavigationHomeScreen/StackNavigation'
+
 const App = () => {
   return (
     <View style={styles.root}>
-      <StatusBar
+        <StatusBar
         // translucent={true}
         backgroundColor={'gray'}
         barStyle='dark-content'
       />
-      <NavigationHomeScreen />
-      {/* <ModalComponent /> */}
+      <StackNavigation />
     </View>
   )
 }

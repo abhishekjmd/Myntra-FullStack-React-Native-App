@@ -1,23 +1,29 @@
 /* eslint-disable prettier/prettier */
 import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+const Tab = createBottomTabNavigator();
+// Imported Screens
+
 import HomeScreen from '../Screens/HomeScreen';
 import ProfileScreen from '../Screens/ProfileScreen'
 import ExploreScreen from '../Screens/ExploreScreen'
 import CategoriesScreen from '../Screens/CategoriesScreen';
 import StudioScreen from '../Screens/StudioScreen'
+// Icons files
+
 import SimoleLineIcons from
     'react-native-vector-icons/SimpleLineIcons';
 import MaterialCommunityIcons from
     'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
-const Tab = createBottomTabNavigator();
+
+
 const NavigationHomeScreen = () => {
     return (
-        <NavigationContainer>
+        <NavigationContainer independent={true} >
             <Tab.Navigator
                 screenOptions={
                     {
@@ -29,7 +35,7 @@ const NavigationHomeScreen = () => {
                 }
             >
                 <Tab.Screen name='home' component={HomeScreen} options={{
-                    headerShown: false, tabBarIcon: ({ focused }) => (
+                    headerShown: false, tabBarIcon: () => (
                         <View>
                             <Image source={{
                                 uri: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png'
@@ -45,7 +51,7 @@ const NavigationHomeScreen = () => {
                     name='Categories' component=
                     {CategoriesScreen}
                     options={{
-                        tabBarIcon: ({ focussed }) => (
+                        tabBarIcon: () => (
                             <View style={styles.iconContainer}>
                                 <AntDesign
                                     size={20}
@@ -59,7 +65,7 @@ const NavigationHomeScreen = () => {
                 />
                 <Tab.Screen name='studio' component={StudioScreen}
                     options={{
-                        tabBarIcon: ({ focused }) => (
+                        tabBarIcon: () => (
                             <View
                                 style={styles.iconContainer}>
                                 <Feather
@@ -79,7 +85,7 @@ const NavigationHomeScreen = () => {
                 <Tab.Screen
                     name='Explore on Myntra' component={ExploreScreen}
                     options={{
-                        tabBarIcon: ({ focussed }) => (
+                        tabBarIcon: () => (
                             <View
                                 style={styles.iconContainer}>
                                 <MaterialCommunityIcons
@@ -92,16 +98,19 @@ const NavigationHomeScreen = () => {
                         ),
                     }}
                 />
-                <Tab.Screen name='profile' component={ProfileScreen}
+                <Tab.Screen
+                    component={ProfileScreen}
+                    name='profile'
                     options={{
-                        tabBarIcon: ({ focused }) => (
-                            <View
-                                style={styles.iconContainer}>
-                                <SimoleLineIcons size={20} name="user"
-                                    style={[styles.icon, { tintColor: focused ? '#e00bc' : 'black' }
-                                    ]}
+                        tabBarIcon: () => (
+                            <View style={styles.iconContainer}>
+                                <SimoleLineIcons
+                                    size={20}
+                                    name="user"
+                                    style={styles.icon}
                                 />
-                                <Text style={styles.icontext} > Profile </Text>
+                                <Text style={styles.icontext}>
+                                    Profile </Text>
                             </View>
                         ),
                     }}
@@ -119,7 +128,7 @@ const styles = StyleSheet.create({
     },
     icontext: {
         // color: focused ? '#e00bcf' : 'black',
-        color:'black'
+        color: 'black'
     },
     icon: {
         color: 'black',

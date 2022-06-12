@@ -2,14 +2,15 @@
 //import liraries
 import React from 'react';
 import { View, StyleSheet, ScrollView, Text } from 'react-native';
+import LoginComponent from '../Components/ImportantComponents/LoginComponent';
 import LowerPortion from '../Components/ProfileScreen Components/LowerPortion/LowerPortion';
 import MiddlePortion from '../Components/ProfileScreen Components/MiddlePortion/MiddlePortion';
 import UpperPortion from '../Components/ProfileScreen Components/UpperPortion/UpperPortion';
 
 const ProfileScreen = () => {
     return (
-        <ScrollView >
-            <UpperPortion />
+        <ScrollView>
+             <UpperPortion /> 
             <MiddlePortion
                 text='Orders'
                 Subtext='Check your order status'
@@ -63,7 +64,6 @@ const ProfileScreen = () => {
                     APP VERSION 4.2203.6
                 </Text>
             </View>
-
         </ScrollView>
     );
 };
