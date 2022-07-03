@@ -9,6 +9,7 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   const Profilepreesed = () => {
     // console.warn("Home pressed")
+    // my name is abhishek  tiwari
     navigation.navigate('profile')
   }
   const ExplorePress = () => {
