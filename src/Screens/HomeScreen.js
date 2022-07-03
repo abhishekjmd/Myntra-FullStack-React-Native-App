@@ -8,7 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 const HomeScreen = () => {
   const navigation = useNavigation();
   const Profilepreesed = () => {
-    // console.warn("Home pressed")
+    console.warn("Home pressed")
     navigation.navigate('profile')
   }
   const ExplorePress = () => {
