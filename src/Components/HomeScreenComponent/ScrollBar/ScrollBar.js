@@ -3,17 +3,28 @@ import { StyleSheet, View, Image, ScrollView, TouchableOpacity } from 'react-nat
 import React from 'react'
 import BottomMenu from '../Bottommenu/BottomMenu'
 const images = [
-  require('../../../../assets/images/image1.jpeg'),
-  require('../../../../assets/images/image2.jpeg'),
-  require('../../../../assets/images/image3.jpeg'),
-  require('../../../../assets/images/image4.jpeg'),
-  require('../../../../assets/images/image5.jpeg'),
-  require('../../../../assets/images/image6.jpeg'),
-  require('../../../../assets/images/image7.jpeg'),
-  require('../../../../assets/images/image8.jpeg'),
-  require('../../../../assets/images/image9.jpeg'),
-
+  require('../../../../assets/images/scroll1.jpeg'),
+  require('../../../../assets/images/scroll2.jpeg'),
+  require('../../../../assets/images/scroll3.jpeg'),
+  require('../../../../assets/images/scroll4.jpeg'),
+  require('../../../../assets/images/scroll5.jpeg'),
+  require('../../../../assets/images/scroll6.jpeg'),
+  require('../../../../assets/images/scroll7.jpeg'),
+  require('../../../../assets/images/scroll8.jpeg'),
+  require('../../../../assets/images/scroll9.jpeg'),
+  require('../../../../assets/images/scroll10.jpeg'),
 ]
+
+const Scrollbottombtn = ()=>{
+  return(
+  <View>
+    <Image 
+    style={styles.scrollbottomimage}
+    source={require('../../../../assets/images/scroll10.jpeg')} />
+  </View>
+  )
+
+}
 
 const ScrollBar = () => {
   return (
@@ -37,7 +48,6 @@ const ScrollBar = () => {
               </TouchableOpacity>
             ))
           }
-
         </View>
       </ScrollView>
   )
@@ -45,6 +55,10 @@ const ScrollBar = () => {
 export default ScrollBar;
 
 const styles = StyleSheet.create({
+  scroll:{
+    backgroundColor:'white',
+    // borderTopWidth:'5',
+  },
   bgcontainer: {
     flexDirection: 'row',
     marginTop: 10,
@@ -56,4 +70,10 @@ const styles = StyleSheet.create({
     width: 70,
     height: 90,
   },
+  scrollbottomimage:{
+    marginLeft: 10,
+    width: 70,
+    height: 90,
+
+  }
 })

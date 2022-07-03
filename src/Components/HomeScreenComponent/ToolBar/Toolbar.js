@@ -45,7 +45,9 @@ export default Toolbar;
 const styles = StyleSheet.create({
     mainContainer: {
         flexDirection: 'row',
-        marginTop: 5,
+        backgroundColor:'white',
+        marginBottom: 3,
+        // marginBottom:'10',
     },
     firstContainer: {
         flexDirection: 'row',
