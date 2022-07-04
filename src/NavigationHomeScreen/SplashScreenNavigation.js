@@ -15,11 +15,12 @@ const SplashScreenNavigation = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen
+               {/* <Stack.Screen
                     name='splash'
                     component={SplashScreen}
                     options={{ headerShown: false }}
                 />
+    */}
                 <Stack.Screen
                     name='Home'
                     component={NavigationHomeScreen}

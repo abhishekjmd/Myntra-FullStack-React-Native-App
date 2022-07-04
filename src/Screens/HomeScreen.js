@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import React from 'react';
 import ToggleBar from '../Components/HomeScreenComponent/ToggleBar/ToggleBar';
 import ScrollBar from '../Components/HomeScreenComponent/ScrollBar/ScrollBar'
 import { useNavigation } from '@react-navigation/native';
-
+import  Imagebtn from '../Components/HomeScreenComponent/MainHomeComponent/Imagebtn';
 const HomeScreen = () => {
   const navigation = useNavigation();
   const Profilepreesed = () => {
@@ -20,22 +20,23 @@ const HomeScreen = () => {
     // console.warn('Categories pressed')
     navigation.navigate('Categories')
   }
-  const FavouriteScreenBtnPressed  = () => {
+  const FavouriteScreenBtnPressed = () => {
     // console.warn('Categories pressed')
     navigation.navigate('Favourites')
   }
   const NotificationbtnPressed = () => {
-  // console.warn('Categories pressed')
-  navigation.navigate('NotificationScreen')
-}
+    // console.warn('Categories pressed')
+    navigation.navigate('NotificationScreen')
+  }
   return (
-    <View>
-      <ToggleBar 
-      NotificationPressed={NotificationbtnPressed}
+    <ScrollView>
+      <ToggleBar
+        NotificationPressed={NotificationbtnPressed}
         FavouriteScreenPressed={FavouriteScreenBtnPressed}
       />
       <ScrollBar />
-    </View>
+      <Imagebtn />
+    </ScrollView>
   )
 }
 

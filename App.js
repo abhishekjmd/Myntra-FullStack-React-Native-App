@@ -1,16 +1,10 @@
 /* eslint-disable prettier/prettier */
-import { View, StyleSheet, StatusBar } from 'react-native'
+import { View, StyleSheet, StatusBar, ScrollView } from 'react-native'
 import React from 'react'
 import SplashScreenNavigation from './src/NavigationHomeScreen/SplashScreenNavigation'
-
 const App = () => {
   return (
     <View style={styles.root}>
-        <StatusBar
-        // translucent={true}
-        backgroundColor={'gray'}
-        barStyle='dark-content'
-      />
       <SplashScreenNavigation />
     </View>
   )
