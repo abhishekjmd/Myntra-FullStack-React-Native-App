@@ -1,7 +1,36 @@
 export default {
-    CarouselImages: [
-        'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/products/mouse1.jpg',
-        'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/products/mouse2.jpg',
-        'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/products/mouse3.jpg',
-    ]
+     Carouselimage:[
+        {
+            text: 'abhishek',
+             image: require('../../assets/images/firstCarousel1.jpeg')
+        },
+        {
+            text: 'abhishek',
+            image: require('../../assets/images/firstCarousel2.jpeg')
+        },
+        {
+            text: 'abhishek',
+            image: require('../../assets/images/firstCarousel3.jpeg')
+        },
+        {
+            text: 'abhishek',
+            image: require('../../assets/images/firstCarousel4.jpeg')
+        },
+        {
+            text: 'abhishek',
+            image: require('../../assets/images/firstCarousel5.jpeg')
+        },
+        {
+            text: 'abhishek',
+            image: require('../../assets/images/firstCarousel6.jpeg')
+        },
+        {
+            text: 'abhishek',
+            image: require('../../assets/images/firstCarousel7.jpeg')
+        },
+        {
+            text: 'abhishek',
+            image: require('../../assets/images/firstCarousel8.jpeg')
+        },
+    ],
 }

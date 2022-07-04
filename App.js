@@ -2,7 +2,6 @@
 import { View, StyleSheet, StatusBar, ScrollView } from 'react-native'
 import React from 'react'
 import SplashScreenNavigation from './src/NavigationHomeScreen/SplashScreenNavigation'
-
 const App = () => {
   return (
     <View style={styles.root}>

@@ -1,27 +1,17 @@
-import { StyleSheet, Text, View, Image, FlatList } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Image, FlatList, useWindowDimensions } from 'react-native'
+import React, { useState, useCallback, } from 'react'
 import Homedata from '../../../Data/Homedata'
-
+import ImageCarousel from './ImageCarousel/ImageCarousel'
 const images = [
     require('../../../../assets/images/bottombtn1.jpeg'),
     require('../../../../assets/images/bottombtn2.jpeg')
 
 ]
-const Carouselimage = [
-    '../../../../assets/images/firstCarousel2.jpeg',
-    '../../../../assets/images/firstCarousel2.jpeg',
-    '../../../../assets/images/firstCarousel2.jpeg',
-    '../../../../assets/images/firstCarousel2.jpeg',
-    '../../../../assets/images/firstCarousel2.jpeg',
-    '../../../../assets/images/firstCarousel2.jpeg',
-    '../../../../assets/images/firstCarousel2.jpeg',
-    '../../../../assets/images/firstCarousel2.jpeg',
-    '../../../../assets/images/firstCarousel2.jpeg',
 
-]
 const Imagebtn = () => {
+    const WindowWidth = useWindowDimensions().width;
     return (
-        <View style={styles.maincontainer} >
+        <View>
             <View style={styles.root} >
                 {
                     images.map((image, index) => (
@@ -33,26 +23,19 @@ const Imagebtn = () => {
                     ))
                 }
             </View>
-            <View>
-                <FlatList
-                    data={Homedata}
-                    renderItem={({ item }) => (
-                        <Image style={styles.imageCarousel} source={{uri:item}}
-                        />
-                    )}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                />
-            </View>
+            <ImageCarousel />
         </View>
     )
 }
 
-export default Imagebtn
+export default Imagebtn;
+export { ImageCarousel };
 
 const styles = StyleSheet.create({
-    maincontainer:{
-        height:500,
+    carouselcontainer: {
+        height: 280,
+        backgroundColor: 'white',
+        marginTop: 5,
     },
     root: {
         marginTop: 5,
@@ -67,8 +50,21 @@ const styles = StyleSheet.create({
         height: 50
     },
     imageCarousel: {
-        margin: 10,
-        height: 250,
-        resizeMode: 'contain',       
+        height: 270,
+        resizeMode: 'cover',
     },
+    dots: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    dot: {
+        width: 10,
+        height: 10,
+        borderRadius: 25,
+        borderWidth: 1,
+        borderColor: '#c9c9c9',
+        backgroundColor: '#ededed',
+        margin: 5,
+    },
+
 })
