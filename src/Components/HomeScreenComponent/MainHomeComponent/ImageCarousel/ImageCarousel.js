@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, FlatList, useWindowDimensions,Image } from 'react-native'
 import React, { useState, useCallback, } from 'react'
 import Homedata from '../../../../Data/Homedata';
-const ImageCarousel = () => {
+const ImageCarousel = ({data,type}) => {
     const WindowWidth = useWindowDimensions().width;
     const [ActiveIndex, setActiveIndex] = useState(0);
     const onFlatListUpdate = useCallback(({ viewableItems }) => {
@@ -11,9 +11,9 @@ const ImageCarousel = () => {
     }, []);
 
     return (
-        <View style={styles.carouselcontainer} >
+        <View style={[styles.carouselcontainer,styles[`carouselcontainer_${type}`],]} >
             <FlatList
-                data={Homedata.Carouselimage}
+                data={data}
                 renderItem={({ item }) => {
                     return (
                         <Image
@@ -33,7 +33,7 @@ const ImageCarousel = () => {
                 onViewableItemsChanged={onFlatListUpdate}
             />
             <View style={styles.dots} >
-                {Homedata.Carouselimage.map((dots, index) => (
+                {data.map((dots, index) => (
                     <View
                         key={index}
                         style={[styles.dot,
@@ -56,6 +56,13 @@ const styles = StyleSheet.create({
         height: 280,
         backgroundColor: 'white',
         marginTop: 5,
+    },
+    carouselcontainer_Primary:{
+        height: 300,
+        backgroundColor: 'white',
+        borderBottomWidth:5,
+        borderBottomColor:'#e3e1e1',
+
     },
     imageCarousel: {
         height: 270,
