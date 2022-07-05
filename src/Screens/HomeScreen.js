@@ -4,7 +4,7 @@ import React from 'react';
 import ToggleBar from '../Components/HomeScreenComponent/ToggleBar/ToggleBar';
 import ScrollBar from '../Components/HomeScreenComponent/ScrollBar/ScrollBar'
 import { useNavigation } from '@react-navigation/native';
-import  Imagebtn from '../Components/HomeScreenComponent/MainHomeComponent/Imagebtn';
+import Imagebtn from '../Components/HomeScreenComponent/MainHomeComponent/ImageBtncomponents/Imagebtn';
 const HomeScreen = () => {
   const navigation = useNavigation();
   const Profilepreesed = () => {
@@ -30,12 +30,15 @@ const HomeScreen = () => {
   }
   return (
     <ScrollView>
-      <ToggleBar
-        NotificationPressed={NotificationbtnPressed}
-        FavouriteScreenPressed={FavouriteScreenBtnPressed}
-      />
-      <ScrollBar />
-      <Imagebtn />
+      <View>
+        <ToggleBar
+          NotificationPressed={NotificationbtnPressed}
+          FavouriteScreenPressed={FavouriteScreenBtnPressed}
+        />
+        <ScrollBar />
+
+        <Imagebtn />
+      </View>
     </ScrollView>
   )
 }
