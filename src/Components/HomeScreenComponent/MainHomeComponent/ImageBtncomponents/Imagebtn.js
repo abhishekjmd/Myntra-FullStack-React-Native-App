@@ -1,10 +1,8 @@
 import { StyleSheet, Text, View, Image, FlatList, useWindowDimensions, ScrollView } from 'react-native'
-import React, { useState, useCallback, } from 'react'
+import React, { useState, useCallback} from 'react'
 import Homedata from '../../../../Data/Homedata'
 import ImageCarousel from '../ImageCarousel/ImageCarousel'
-import ScrollBar from '../../ScrollBar/ScrollBar'
-import ToggleBar from '../../ToggleBar/ToggleBar'
-
+import styles from './styles'
 const SingleImage = () => {
     return (
         <View style={styles.singleImageContainer}>
@@ -21,35 +19,23 @@ const SingleImage = () => {
     )
 }
 const MultipleImage = () => {
+    const WindowWidth = useWindowDimensions().width;
     return (
-        <View>
-            <Text> Top picks of the season  </Text>
+        <View style={styles.MultipleImageContainer} >
+            <View style={styles.MultipleImagetextContainer} >
+                <Text style={styles.MultipleContainertext} > Top picks of the season  </Text>
+            </View>
             <View style={styles.multipleImagesubContainer}>
-
-
-
-            
-                {/*
-                    Homedata.MultipleImages.map((item, index) => (
-
+                <FlatList
+                    numColumns={2}
+                    data={Homedata.MultipleImages}
+                    keyExtractor={(item, index) => index.toString()}
+                    renderItem={({ item }) => (
                         <Image
-                            style={styles.multipleImages}
-                            source={item.image}
-                            key={index}
-                        />
-
-                    ))
-
-                    */}
-                {/*<Image
-                    style={styles.multipleImages}
-                    source={require('../../../../../assets/images/firstcollage1.jpeg')} />
-                <Image
-                    style={styles.multipleImages}
-                    source={require('../../../../../assets/images/firstcollage2.jpeg')} />
-                <Image source={require('../../../../../assets/images/firstcollage3.jpeg')} />
-            <Image source={require('../../../../../assets/images/firstcollage4.jpeg')} />
-                */}
+                            style={[styles.multipleImages, { width: WindowWidth - 200 }]}
+                            source={item.image} />
+                    )}
+                />
             </View>
         </View>
     )
@@ -89,56 +75,3 @@ const Imagebtn = () => {
 }
 
 export default Imagebtn;
-
-
-const styles = StyleSheet.create({
-    carouselcontainer: {
-        height: 280,
-        backgroundColor: 'white',
-        marginTop: 5,
-    },
-    root: {
-        marginTop: 5,
-        flexDirection: 'row',
-        height: 60,
-        backgroundColor: 'white',
-    },
-    images: {
-        marginTop: 5,
-        width: 195,
-        height: 50
-    },
-    imageCarousel: {
-        height: 270,
-        resizeMode: 'cover',
-    },
-    dots: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-    },
-    dot: {
-        width: 10,
-        height: 10,
-        borderRadius: 25,
-        borderWidth: 1,
-        borderColor: '#c9c9c9',
-        backgroundColor: '#ededed',
-        margin: 5,
-    },
-    singleImage: {
-        height: 280,
-        width: 196,
-    },
-    singleImageContainer: {
-        flexDirection: 'row',
-    },
-    multipleImagesubContainer: {
-        // flexDirection: 'row',
-
-    },
-    multipleImages: {
-        width: 195,
-        height: 220,
-    },
-
-})
