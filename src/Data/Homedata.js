@@ -65,4 +65,14 @@ export default {
             image: require('../../assets/images/firstcollage4.jpeg')},
 
     ],
+     Finescroll :[
+        { image: require('../../assets/images/firstfinitescroll1.jpeg') },
+        { image: require('../../assets/images/firstfinitescroll2.jpeg') },
+        { image: require('../../assets/images/firstfinitescroll3.jpeg') },
+        { image: require('../../assets/images/firstfinitescroll4.jpeg') },
+        { image: require('../../assets/images/firstfinitescroll5.jpeg') },
+        { image: require('../../assets/images/firstfinitescroll6.jpeg') },
+        { image: require('../../assets/images/firstfinitescroll7.jpeg') },
+
+    ],
 }

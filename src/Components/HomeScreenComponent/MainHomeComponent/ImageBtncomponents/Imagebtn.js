@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Image, FlatList, useWindowDimensions, ScrollView } from 'react-native'
-import React, { useState, useCallback} from 'react'
+import React, { useState, useCallback } from 'react'
 import Homedata from '../../../../Data/Homedata'
 import ImageCarousel from '../ImageCarousel/ImageCarousel'
 import styles from './styles'
@@ -41,6 +41,31 @@ const MultipleImage = () => {
     )
 }
 
+const Finescroll = () => {
+    const WindowWidth = useWindowDimensions().width;
+    return (
+        <View style={styles.FinescrollMaincontainer} >
+            <View>
+                <Text style={styles.FinescrollText}> featured brands </Text>
+            </View>
+            <FlatList
+                data={Homedata.Finescroll}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={({ item }) => (
+                    <Image
+                        style={[styles.Finescrollimage, { width: WindowWidth - 120 }]}
+                        source={item.image} />
+                )}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                decelerationRate={'fast'}
+                snapToAlignment={'start'}
+
+            />
+        </View>
+    )
+}
+
 const Imagebtn = () => {
     const WindowWidth = useWindowDimensions().width;
     return (
@@ -69,6 +94,7 @@ const Imagebtn = () => {
                 type='Primary'
             />
             <MultipleImage />
+            <Finescroll />
         </View>
 
     )
