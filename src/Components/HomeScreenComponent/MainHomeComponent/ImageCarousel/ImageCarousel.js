@@ -25,8 +25,8 @@ const ImageCarousel = ({data,type}) => {
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 snapToInterval={WindowWidth}
-                snapToAlignment={'start'}
                 decelerationRate={'fast'}
+                snapToAlignment={'start'}
                 viewabilityConfig={{
                     viewAreaCoveragePercentThreshold: 58,
                 }}

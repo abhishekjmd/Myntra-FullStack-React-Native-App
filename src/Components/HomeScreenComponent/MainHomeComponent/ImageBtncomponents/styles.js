@@ -71,6 +71,23 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         // padding:5,
     },
+    FinescrollMaincontainer: {
+        backgroundColor: 'white'
+    },
+    Finescrollzsubcontainer: {},
+    FinescrollText: {
+        color: 'black',
+        textTransform: 'uppercase',
+        fontSize: 16,
+        padding: 10,
+        fontWeight: '600',
 
+    },
+    Finescrollimage:{
+        borderColor:'#e3e1e1',
+        borderWidth:2,
+        marginLeft:5,
+        height:360,
+    },
 })
 export default styles;
