@@ -1,73 +1,36 @@
-import { StyleSheet, Text, View, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, FlatList } from 'react-native'
 import React from 'react'
 import UpperExplorePortion from '../Components/ExploreScreen Component/UpperExplorePortion'
+import Homedata from '../Data/Homedata'
 const ExploreScreen = () => {
   return (
-    <ScrollView style={styles.rootContainer} >
-      <UpperExplorePortion
-        text='Myntra Insider'
-        Icon='crown'
-        type='PrimaryJ'
-        extText='New'
-      />
-      <UpperExplorePortion
-        text='Myntra Live'
-        Icon='antenna'
-        type='PrimaryJ'
-        extText='New'
-      />
-      <UpperExplorePortion
-        text='Myntra Luxe'
-        Icon='diamond-stone'
-      />
-      <UpperExplorePortion
-        text='Gift Cards'
-        Icon='gift'
-      />
-      <UpperExplorePortion
-        text='Myntra Mall'
-        Icon='shopping'
-      />
-      <View style={styles.BorderColor} />
-      <UpperExplorePortion
-        text='My Prizes'
-        Icon='trophy'
-        type='PrimaryJ'
-        extText='New'
-      />
-      <UpperExplorePortion
-        text='Myntra Mall'
-        Icon='cog-play'
-      />
-      <View style={styles.BorderColor} />
-      <UpperExplorePortion
-        text='Refer & Earn'
-        Icon='heart-cog-outline'
-      />
-      <UpperExplorePortion
-        text='Scan for Coupon'
-        Icon='qrcode-scan'
-      />
-      <UpperExplorePortion
-        text='Myntra Fashion Superstar'
-        Icon='star-face'
-      />
-      <UpperExplorePortion
-        text='Myntra Masterclass'
-        Icon='alpha-m-circle-outline'
-      />
-      <UpperExplorePortion
-        text='Myntra Masterclass'
-        Icon='alpha-m-circle-outline'
-      />
-    </ScrollView>
+    <View style={styles.rootContainer} >
+      <FlatList
+        data={Homedata.ExploreScreenData}
+        scrollEnabled={true}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item }) => {
+          return (
+            <UpperExplorePortion
+              text={item.text}
+              Icon={item.Icon}
+              type={item.type}
+              extText={item.extText}
+              onPress={item.onPress}
+            />
+            )
+          }}
+          />
+    </View>
   )
 }
 
 export default ExploreScreen
 
 const styles = StyleSheet.create({
-  rootContainer: {},
+  rootContainer: {
+    backgroundColor:'white',
+  },
   BorderColor: {
     borderBottomWidth: 8,
     borderBottomColor: '#ededed',

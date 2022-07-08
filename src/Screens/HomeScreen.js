@@ -29,17 +29,17 @@ const HomeScreen = () => {
     navigation.navigate('NotificationScreen')
   }
   return (
-    <ScrollView>
+      <ScrollView>
       <View>
         <ToggleBar
           NotificationPressed={NotificationbtnPressed}
           FavouriteScreenPressed={FavouriteScreenBtnPressed}
         />
-        <ScrollBar />
-
+         <ScrollBar />
         <Imagebtn />
       </View>
-    </ScrollView>
+      </ScrollView>
+    
   )
 }
 

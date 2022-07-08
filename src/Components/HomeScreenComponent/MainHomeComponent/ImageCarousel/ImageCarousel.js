@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View, FlatList, useWindowDimensions,Image } from 'react-native'
+import { StyleSheet, Text, View, FlatList, useWindowDimensions,Image,Pressable } from 'react-native'
 import React, { useState, useCallback, } from 'react'
 import Homedata from '../../../../Data/Homedata';
-const ImageCarousel = ({data,type}) => {
+import { useNavigation } from '@react-navigation/native';
+const ImageCarousel = ({data,type,}) => {
+  const navigation = useNavigation();
     const WindowWidth = useWindowDimensions().width;
     const [ActiveIndex, setActiveIndex] = useState(0);
     const onFlatListUpdate = useCallback(({ viewableItems }) => {
@@ -14,12 +16,16 @@ const ImageCarousel = ({data,type}) => {
         <View style={[styles.carouselcontainer,styles[`carouselcontainer_${type}`],]} >
             <FlatList
                 data={data}
+                scrollEnabled={true}
                 renderItem={({ item }) => {
                     return (
+                        <Pressable onPress={()=>{navigation.navigate(item.onPress)}} > 
                         <Image
                             style={[styles.imageCarousel, { width: WindowWidth }]}
                             source={item.image}
+                            
                         />
+                        </Pressable>
                     )
                 }}
                 horizontal

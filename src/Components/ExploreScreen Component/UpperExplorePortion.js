@@ -6,12 +6,17 @@ import EvilIcons from
   'react-native-vector-icons/EvilIcons'
 import FontAwesome5 from
   'react-native-vector-icons/FontAwesome5'
-const UpperExplorePortion = ({ text, Icon, container, type, extText }) => {
+import { useNavigation } from '@react-navigation/native';
+
+const UpperExplorePortion = ({ text, Icon, container, type, extText,onPress }) => {
+  const navigation = useNavigation();
   return (
     <View>
-      <View style={[styles.rootContainer,
-      styles[`rootContainer_${type}`]]}>
-        <View style={styles.iconContainer} >
+      <Pressable 
+      style={[styles.rootContainer,styles[`rootContainer_${type}`]]}
+      onPress={()=>{navigation.navigate(onPress)}}
+      >
+        <View style={styles.iconContainer}>
           <MaterialCommunityIcons name=
             {Icon}
             size={25} />
@@ -25,7 +30,7 @@ const UpperExplorePortion = ({ text, Icon, container, type, extText }) => {
         <View style={[styles.extContainer, styles[`extContainer_${type}`]]} >
           <Text style={[styles.extText, styles[`extText_${type}`]]} > {extText} </Text>
         </View>
-      </View>
+      </Pressable>
     </View>
   )
 }
@@ -47,6 +52,16 @@ const styles = StyleSheet.create({
     height: 55,
     alignItems: 'center',
     marginLeft: 30,
+
+  },
+  rootContainer_PrimaryX: {
+    width: '100%',
+    flexDirection: 'row',
+    height: 65,
+    alignItems: 'center',
+    borderBottomWidth: 8,
+    // borderBottomColor: '#ededed',
+    borderBottomColor: '#f7f5f5',
 
   },
   iconContainer: {
