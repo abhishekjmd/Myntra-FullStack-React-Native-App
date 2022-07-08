@@ -50,6 +50,7 @@ const Finescroll = () => {
             </View>
             <FlatList
                 data={Homedata.Finescroll}
+                scrollEnabled={true} 
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item }) => (
                     <Image

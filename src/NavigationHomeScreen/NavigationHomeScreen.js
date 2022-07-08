@@ -23,100 +23,100 @@ import Feather from 'react-native-vector-icons/Feather';
 
 const NavigationHomeScreen = () => {
     return (
-        
-            <Tab.Navigator
-                screenOptions={
-                    {
-                        "tabBarShowLabel": false,
-                        "tabBarStyle": [{
-                            height: 65,
-                        }]
-                    }
-                }
-            >
-                <Tab.Screen name='home' component={HomeScreen} options={{
-                    headerShown: false, tabBarIcon: () => (
-                        <View>
-                            <Image source={{
-                                uri: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png'
-                            }}
-                                style={styles.logo} />
-                            <Text style={styles.icontext}>Home</Text>
 
+        <Tab.Navigator
+            screenOptions={
+                {
+                    "tabBarShowLabel": false,
+                    "tabBarStyle": [{
+                        height: 65,
+                    }]
+                }
+            }
+        >
+            <Tab.Screen name='home' component={HomeScreen} options={{
+                headerShown: false, tabBarIcon: () => (
+                    <View>
+                        <Image source={{
+                            uri: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png'
+                        }}
+                            style={styles.logo} />
+                        <Text style={styles.icontext}>Home</Text>
+
+                    </View>
+                ),
+            }}
+            />
+            <Tab.Screen
+                name='Categories' component=
+                {CategoriesScreen}
+                options={{
+                    tabBarIcon: () => (
+                        <View style={styles.iconContainer}>
+                            <AntDesign
+                                size={20}
+                                name="appstore-o"
+                                style={styles.icon}
+                            />
+                            <Text style={styles.icontext}> Categories </Text>
                         </View>
                     ),
                 }}
-                />
-                <Tab.Screen
-                    name='Categories' component=
-                    {CategoriesScreen}
-                    options={{
-                        tabBarIcon: () => (
-                            <View style={styles.iconContainer}>
-                                <AntDesign
-                                    size={20}
-                                    name="appstore-o"
-                                    style={styles.icon}
-                                />
-                                <Text style={styles.icontext}> Categories </Text>
-                            </View>
-                        ),
-                    }}
-                />
-                <Tab.Screen name='studio' component={StudioScreen}
-                    options={{
-                        tabBarIcon: () => (
-                            <View
-                                style={styles.iconContainer}>
-                                <Feather
-                                    size={20}
-                                    name="tv"
-                                    style={styles.icon}
-                                />
-                                <Text style=
-                                    {styles.icontext}
-                                >
-                                    Studio
-                                </Text>
-                            </View>
-                        ),
-                    }}
-                />
-                <Tab.Screen
-                    name='Explore on Myntra' component={ExploreScreen}
-                    options={{
-                        tabBarIcon: () => (
-                            <View
-                                style={styles.iconContainer}>
-                                <MaterialCommunityIcons
-                                    size={25}
-                                    name="atom"
-                                    style={styles.icon}
-                                />
-                                <Text style={styles.icontext}> Explore </Text>
-                            </View>
-                        ),
-                    }}
-                />
-                <Tab.Screen
-                    component={ProfileScreen}
-                    name='profile'
-                    options={{
-                        tabBarIcon: () => (
-                            <View style={styles.iconContainer}>
-                                <SimoleLineIcons
-                                    size={20}
-                                    name="user"
-                                    style={styles.icon}
-                                />
-                                <Text style={styles.icontext}>
-                                    Profile </Text>
-                            </View>
-                        ),
-                    }}
-                />
-            </Tab.Navigator>
-        
+            />
+            <Tab.Screen name='studio' component={StudioScreen}
+                options={{
+                    tabBarIcon: () => (
+                        <View
+                            style={styles.iconContainer}>
+                            <Feather
+                                size={20}
+                                name="tv"
+                                style={styles.icon}
+                            />
+                            <Text style=
+                                {styles.icontext}
+                            >
+                                Studio
+                            </Text>
+                        </View>
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name='Explore on Myntra' component={ExploreScreen}
+                options={{
+                    tabBarIcon: () => (
+                        <View
+                            style={styles.iconContainer}>
+                            <MaterialCommunityIcons
+                                size={25}
+                                name="atom"
+                                style={styles.icon}
+                            />
+                            <Text style={styles.icontext}> Explore </Text>
+                        </View>
+                    ),
+                }}
+            />
+            <Tab.Screen
+                component={ProfileScreen}
+                name='profile'
+                options={{
+                    tabBarIcon: () => (
+                        <View style={styles.iconContainer}>
+                            <SimoleLineIcons
+                                size={20}
+                                name="user"
+                                style={styles.icon}
+                            />
+                            <Text style={styles.icontext}>
+                                Profile </Text>
+                        </View>
+                    ),
+                }}
+            />
+        </Tab.Navigator>
+
     )
 }
 export default NavigationHomeScreen;

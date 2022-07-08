@@ -1,42 +1,40 @@
-import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
+import { StyleSheet, Text, View, Image, Pressable, FlatList, Modal, findNodeHandle } from 'react-native'
 import React, { useState } from 'react'
 import Entypo from 'react-native-vector-icons/Entypo'
 const TopCategories = ({ text, subtext, type, image, Press, iconRequire, subPress }) => {
+    const modalpress = () => {
+        console.warn('hii i am pressed')
+    }
     return (
         <View>
             <View style={[styles.mainContainer, styles[`mainContainer_${type}`]]}>
-                <Pressable style={styles.colltext}
-                    onPress={Press}
-
-                >
-                    <View
-                        style={styles.uptxtContainer} >
-                        <Text
-                            style={styles.uptxt} > {text}
-                        </Text>
+                <Pressable
+                    style={styles.colltext}
+                    onPress={modalpress}>
+                    <View style={styles.uptxtContainer}>
+                        <Text style={styles.uptxt}> {text} </Text>
                     </View>
-                    <View style=
-                        {styles.dwntxtContainer} >
-                        <Text style={styles.dwntxt} >
+                    <View style={styles.dwntxtContainer}>
+                        <Text style={styles.dwntxt}>
                             {subtext}
                         </Text>
                     </View>
-                </Pressable
-                >
-                <Pressable
-                    onPress={subPress}>
+                </Pressable>
+                <Pressable onPress={subPress}>
                     <Entypo
                         name={iconRequire}
                         style={[styles.icon, styles[`icon_${type}`]]}
                         size={20}
                     />
+
                 </Pressable>
                 <Image
                     source={image}
                     style={[styles.image, styles[`image_${type}`]]}
                 />
-                
+
             </View>
+
         </View>
     )
 }
@@ -271,9 +269,4 @@ const styles = StyleSheet.create({
         width: 140,
         height: 140,
     },
-
-
-
-
-
 })

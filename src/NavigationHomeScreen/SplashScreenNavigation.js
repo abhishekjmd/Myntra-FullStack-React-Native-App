@@ -10,7 +10,7 @@ import SplashScreen from '../Screens/SplashScreen';
 import NavigationHomeScreen from './NavigationHomeScreen';
 import NotificationScreen from '../Screens/TopBarScreens/NotificationScreen';
 import FavouritesScreen from '../Screens/TopBarScreens/FavouritesScreen';
-
+import ProductScreens from '../Screens/NestedScreens/ProductScreen'
 const SplashScreenNavigation = () => {
     return (
         <NavigationContainer>
@@ -25,7 +25,7 @@ const SplashScreenNavigation = () => {
                     name='Home'
                     component={NavigationHomeScreen}
                     options={{ headerShown: false }}
-
+                    
                 />
                 <Stack.Screen
                     name='NotificationScreen'
@@ -35,6 +35,14 @@ const SplashScreenNavigation = () => {
                     name='Favourites'
                     component={FavouritesScreen}
                 />
+                <Stack.Screen
+                    name='Products'
+                    component={ProductScreens}
+                    options={{ title:'MYNTRA' }}
+
+                />
+
+
             </Stack.Navigator>
         </NavigationContainer>
     )
